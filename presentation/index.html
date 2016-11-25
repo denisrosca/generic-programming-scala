@@ -1,0 +1,232 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/darcula.css">
+    <title>Generic Programming in Scala - Type Class Derivation</title>
+</head>
+<body>
+<div class="reveal">
+    <!--<div class="slides" style="text-align: left;">-->
+    <div class="slides">
+        <section data-markdown="title.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+        <section data-markdown="about_me.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+        <section data-markdown="goals.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+        <section data-markdown="what.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+        <section>
+            <section data-markdown="json-hierarchy.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="json-encoder-trait.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+        </section>
+        <section data-markdown="data-definitions.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+        <section data-markdown="possible-solutions.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+        <section data-markdown="possible-solutions-reflection.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+        <section>
+            <section data-markdown="possible-solutions-typeclass.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="what-is-typeclass.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="what-is-typeclass-scala.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="what-is-typeclass-simple-encoders.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+        </section>
+        <section data-markdown="possible-solutions-generic.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+        <section>
+            <section data-markdown="what-is-generic-programming-quote.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="what-is-generic-programming.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+        </section>
+        <section>
+            <section data-markdown="what-is-adt.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="what-is-adt-scala.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+        </section>
+        <section data-markdown="generic-encodings.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+        <section data-markdown="generic-encodings-examples.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+        <section>
+            <section data-markdown="what-is-generic-derivation.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="what-does-generic-derivation-do.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="what-does-generic-derivation-do-diagram.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="generic-encoder-primitives.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="generic-encoder-implementation.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+            <section data-markdown="drawbacks.md"
+                     data-separator="^\n\n\n"
+                     data-separator-vertical="^\n\n"
+                     data-separator-notes="^Note:"
+                     data-charset="utf8">
+            </section>
+        </section>
+        <section data-markdown="additional_stuff.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf8">
+        </section>
+    </div>
+</div>
+<script src="js/reveal.js"></script>
+<script src="js/head.1.0.3.min.js"></script>
+<script>
+        Reveal.initialize({
+            width: 1200,
+            height: 720,
+            dependencies: [
+                // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+                // Interpret Markdown in <section> elements
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+                // Syntax highlight for <code> elements
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() {
+                        hljs.configure({
+                            languages: ['scala']
+                        })
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+
+                // Zoom in and out with Alt+click
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+
+                // Speaker notes
+                { src: 'plugin/notes/notes.js', async: true },
+
+                // MathJax
+                { src: 'plugin/math/math.js', async: true }
+            ]
+        });
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

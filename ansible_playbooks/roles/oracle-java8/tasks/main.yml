@@ -1,0 +1,16 @@
+---
+- name: Add Java repository to sources
+  apt_repository: repo='ppa:webupd8team/java' update_cache=yes
+  become: yes
+
+- name: Autoaccept license for Java
+  debconf: name='oracle-java8-installer' question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+  become: yes
+
+- name: Install Java 8
+  apt: name={{item}} state=latest install_recommends=yes
+  with_items:
+    - oracle-java8-installer
+    - ca-certificates
+    - oracle-java8-set-default
+  become: yes

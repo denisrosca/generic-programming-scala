@@ -1,0 +1,11 @@
+---
+- name: Update npm
+  npm: name=npm state=latest global="yes"
+  become: true
+
+- name: Install build-essentials
+  apt: name=build-essential state=latest update_cache=yes
+  become: yes
+
+- name: Install reveal.js packages
+  command: npm install --no-bin-links chdir=/vagrant/presentation

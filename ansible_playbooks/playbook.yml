@@ -1,0 +1,10 @@
+---
+- hosts: workstations
+  vars:
+    - nodejs_version: "7.x"
+  roles:
+  - oracle-java8
+  - sbt
+  - {role: geerlingguy.nodejs, become: true}
+  - presentation
+# - emacs

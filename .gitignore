@@ -1,5 +1,28 @@
 # Created by https://www.gitignore.io/api/sbt,sbt,intellij
 
+*.log
+
+### Vagrant ###
+.vagrant
+
+### ENSIME ###
+.ensime
+.ensime_cache
+
+### EMACS ###
+elpa/
+auto-save-list/
+
+### NodeJS ###
+node_modules/
+
+### Ammonite ###
+ammonite-configs/cache
+ammonite-configs/history
+
+### Ansible ###
+*.retry
+
 ### SBT ###
 # Simple Build Tool
 # http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
